@@ -44,6 +44,7 @@
         position: relative;
         z-index: 5;
       }
+
       #header h1,
       #header h2,
       #header p {
@@ -158,6 +159,16 @@
         }
       }
 
+      .lang-button a{
+          position: absolute;
+          top:0;
+          right: 0;
+          padding: 15px;
+          color: black;
+          background-color: beige;
+          z-index: 1000;
+        }
+
       /* Fix issue on mobile browser where scroll breaks  */
       .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
       .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan
@@ -168,14 +179,15 @@
   </head>
   <body>
     <div id="map"></div>
+
     <div id="story"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-    <script src="./mapboxStoryContent.js"></script>
+    <script src="./storyline.js"></script>
     <script src="./customMapControls.js"></script>
-    <script src="./my_charts.js"></script>
+    <script src="./myCharts.js"></script>
 
     <script>
       var initLoad = true;
@@ -236,6 +248,13 @@
         var bylineText = document.createElement("p");
         bylineText.innerText = config.byline;
         header.appendChild(bylineText);
+      }
+
+      if (config.switchLanguageButton) {
+        var languageButton = document.createElement("div");
+        languageButton.setAttribute("class", "lang-button");
+        languageButton.innerHTML = config.switchLanguageButton;
+        header.appendChild(languageButton);
       }
 
       if (header.innerText.length > 0) {
