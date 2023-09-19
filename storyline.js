@@ -66,13 +66,15 @@ const config = {
       hidden: false,
       title: "Aufteilung des Verkehrsraums in Hamburg",
       description:
-        '<p>Wer nimmt momentan wie viel Verkehrsraum ein? Wie viele Wege werden auf diesen Flächen zurückgelegt?</p>' +
+        '<p><i>Fast 70% der Verkehrsfläche werden von Autos für Fahrbahnen und Parkraum verbraucht. Auf dieser Fläche finden 32% aller Wege statt.' +
+        '<br> 3,4% der Verkehrsfläche sind Radwege. Auf dieser Fläche finden 22% aller in Hamburg zurückgelegten Wege statt.' +  
+        '</i></p> ' +
         '<div><canvas id="chart_verkehrsflaechen" style="height:280px; max-width:100%;"></canvas></div>' +
         '<p>Der motorisierte Verkehr nimmt mit Parkflächen und Fahrbahn 67,75% der nutzbaren Verkehrsfläche Hamburgs' +
-        'in Anspruch und hat einen enormen Flächenverbrauch, auf dem ca. 32% aller Wege zurückgelegt werden.' +
+        'in Anspruch und hat einen enormen Flächenverbrauch, auf dem ca. 32% aller Wege zurückgelegt werden. ' +
         '43% der Hamburger Haushalte besitzen keinen PKW. <br />' +
         'Auf rund 3,4% der Gesamtfläche – also einem Zwanzigstel der Fläche des Autoverkehrs – werden 22% aller Wege per Rad zurückgelegt.' +
-        'Somit ist das Rad bei weitem das flächeneffektivste Fortbewegungsmittel.</p>',
+        '<br>Somit ist das Rad bei weitem das flächeneffektivste Fortbewegungsmittel.</p>',
       mapAnimation: "flyTo",
       rotateAnimation: false,
       callback: "",
@@ -93,9 +95,9 @@ const config = {
       description:
         '<p>Doch wie kommen solche Flächenverhältnisse zustande? <br />' +
         'Als Beispiel dient hier eine typische Aufteilung der Straßenfläche an der Max-Brauer-Allee. ' +
-        'Trotz vergleichsweise viel Platz für Begrünung für Fußwege nehmen Fahr- und Parkflächen einen Großteil des Platzes ein.' +
+        'Trotz vergleichsweise viel Platz für Begrünung für Fußwege nehmen Fahr- und Parkflächen einen Großteil des Platzes ein. ' +
         'Der Radverkehr hat nur am Südende einen schmalen Streifen und ist ansonsten gar nicht vertreten. ' +
-        'Die Straßenaufteilung soll hier allerdings in Zukunft neu gestaltet werden</p>',
+        'Die Straßenaufteilung soll hier allerdings in Zukunft neu gestaltet werden.</p>',
       location: {
         center: [9.9395, 53.55365],
         zoom: 17.52,
@@ -164,7 +166,7 @@ const config = {
         'nach der Kreuzung aufgelöst wird. Nach ca. 150m beginnt verdeckt von einer ' +
         'Parkreihe ein neuer Radweg, der allerdings auch nicht ausgewiesen ist. ' +
         'Befragungen zeigen, dass viele Menschen sich nicht trauen in Hamburg Rad zu fahren. ' +
-        'Solche eher einfach zu schließenden Lücken, tragen sicherlich dazu bei.',
+        'Solche eher einfach zu schließenden Lücken tragen sicherlich dazu bei.',
       location: {
         zoom: 19.28,
         center: [9.97436, 53.56899],
@@ -203,9 +205,9 @@ const config = {
         '<div class="left">' +
         "<h1>Wie groß ist der Fußabdruck neuer Radwege?</h1>" +
         "<p>" +
-        "Hamburgs Straßen scheinen verstopft, und das Bauplatz-Dilemma in der " +
+        "Hamburgs Straßen scheinen verstopft und das Bauplatz-Dilemma in der " +
         "Stadt lässt wenig Raum für neue Straßen. Die Statistik zeigt: Je mehr Menschen sich trauen, " +
-        "dass weitaus flächeneffzientere Rad zu nutzen, des stärker profitieren auch " +
+        "dass weitaus flächeneffzientere Rad zu nutzen, desto stärker profitieren auch " +
         "diejenigen, die wirklich auf das Auto angewiesen sind. Für " +
         "Autofahrende fühlt sich das zunächst oft so an, als würde der ohnehin " +
         "schon knappe Platz zum Parken und Fahren zusätzlich verkleinert. Der " +
@@ -269,7 +271,7 @@ const config = {
       title: "Erste Lösungsansätze",
       description:
         "<p>" +
-        " Die Stormaner Straße wurde mit einem Radfahrstreifen und einer geschützten Fahrradspur aufgewertet, " +
+        "Die Stormaner Straße wurde mit einem Radfahrstreifen und einer geschützten Fahrradspur aufgewertet, " +
         "auf der sich auch Kinder sicher fühlen können. Im Kreuzungsbereich wurde dafür leider der Platz " +
         "der Fußwege verringert. Größtenteils wurden aber Fahrbahn- und Parkflächen verwendet. " +
         "Trotz dieser Änderungen behält der motorisierte Verkehr noch immer den Großteil des Platzes." +
@@ -358,13 +360,13 @@ const config = {
       title: 'Ausblick: Was sagen uns die Analysen über den Stand des Verkehrsraums?',
       description:
         "<p>" +
-        "In der Debatte rund um die Mobilitätswende spielt die Aufteilung des Verkehrsraum eine entscheidende Rolle." +
+        "In der Debatte rund um die Mobilitätswende spielt die Aufteilung des Verkehrsraum eine entscheidende Rolle. " +
         "Die Daten der vorliegenden Analyse zeigen, welches Verkehrsmittel wie viel Platz braucht. " +
         "So zeigt sich beispielsweise: Parkplätze (6,8 %) nehmen in Hamburg doppelt so viel Platz ein wie die gesamten Radwege (3,4%) zusammen." +
         "</p>" +
         "<p>" +
         "Eine stärkere Nutzung des Rads im urbanen Verkehrsraum reduziert nicht nur die Lärm- und Luftverschmutzung, " +
-        "sie schafft mehr Platz und neue Räume mit hoher Aufenthaltsqualität für alle." +
+        "sie schafft mehr Platz und neue Räume mit hoher Aufenthaltsqualität für alle. " +
         "Diese Erkenntnisse sind auch im Nationalen Radverkehrsplan 3.0 verankert. " +
         "Dieser beinhaltet die Strategie der Bundesregierung zur Förderung des Radverkehrs in Deutschland bis 2030 und räumt dem Rad " +
         "eine zentralere Funktion in der gesamten Mobilität ein, weshalb der Plan nicht nur ein lückenloses Radverkehrsnetz zum Ziel hat, " +
