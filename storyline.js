@@ -38,6 +38,7 @@ const config = {
         'versucht etwas Objektivität und Nüchternheit in eine emotionale Debatte zu bringen. ' +
         'Entdecken Sie mit uns wie fast 7% der öffentlichen Verkehrsfläche zum Beispiel alleine für '+ 
         'Parken verbraucht wird und wie viele Parkplätze seit 2019 für Radwege weggefallen sind. <br>' +
+        'Am Ende der Story können Sie auch ihre eigene Nachbarschaft erkunden.<br>' +
         'Let\'s dive in.</p>' +
         '</div>' +
         '<div class="right">' +
@@ -240,6 +241,7 @@ const config = {
         "Wie viel der Fahr- oder Parkflächen wurden tatsächlich in " +
         "Radinfrastruktur umgewandelt?" +
         "</h2>" +
+        '<p><i>Seit 2019 wurde 0,71% der Fahrbahnfläche und 0,27% der Parkfläche in Radinfrastruktur umgebaut. Insgesamt also weniger als 1% der Fläche für Autoverkehr.</i></p>' +
         "<div>" +
           '<canvas id="chart_footprint" style="height:400px; max-width:100%;"></canvas>' +
         "</div> " +
@@ -384,6 +386,22 @@ const config = {
       },
       mapAnimation: "flyTo",
       callback: "overviewGaps",
+      rotateAnimation: false,
+      onChapterEnter: [],
+      onChapterExit: [],
+    },{
+      id: "explore-map",
+      alignment: "center",
+      hidden: false,
+      description: 'Bewegen Sie die Karte und schauen Sie sich in Ihrer Nachbarschaft um. Wer hat hier wie viel Platz?',
+      location: {
+        zoom: 18.2,
+        center: [10.05692, 53.58058],
+        pitch: 34,
+        bearing: -11.2,
+      },
+      mapAnimation: "flyTo",
+      callback: "overviewNewInfra",
       rotateAnimation: false,
       onChapterEnter: [],
       onChapterExit: [],
