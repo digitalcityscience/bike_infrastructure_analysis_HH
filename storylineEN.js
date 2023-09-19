@@ -36,6 +36,7 @@ const config = {
         'And who made space for it - and how much?</p><p>This cartographic evaluation ' +
         'attempts to bring some objectivity and sobriety into an emotional debate. ' +
         'Discover with us how almost 7% of the public traffic area is used solely for parking and how many parking spaces have been eliminated for bike paths since 2019. ' +
+        "Explore your own neighborhood at the story's end" +
         'Let\'s dive in.</p>' +
         '</div>' +
         '<div class="right">' +
@@ -63,6 +64,9 @@ const config = {
         hidden: false,
         title: "Distribution of Traffic Space in Hamburg",
         description:
+          '<p><i>' +
+          '3.4% of the traffic area is bike lanes. This space serves 22% of all trips.'+
+          '</i></p>' +
           '<p>Who currently occupies how much traffic space? How many routes are covered on these areas?</p>' +
           '<div><canvas id="chart_verkehrsflaechen" style="height:280px; max-width:100%;"></canvas></div>' +
           '<p>Motorized traffic, with parking areas and roads, occupies 67.75% of the usable traffic area of Hamburg, ' +
@@ -231,6 +235,7 @@ const config = {
           "How much of the driving or parking spaces have actually been " +
           "converted into cycling infrastructure?" +
           "</h2>" +
+          '<p><i>Since 2019, 0.71% of roadway space and 0.27% of parking space has been converted to bicycle infrastructure. So, in total, less than 1% of the area for car traffic.</i></p>' +
           "<div>" +
             '<canvas id="chart_footprint" style="height:400px; max-width:100%;"></canvas>' +
           "</div> " +
@@ -259,195 +264,79 @@ const config = {
         id: "sources-stormaner-strasse",
         alignment: "left",
         hidden: false,
-        title: "Initial Approaches",
+        title: "First improvements",
         description:
           "<p>" +
-          "Stormaner Straße in Steilshoop: About 50 parking spaces were converted into a bike path. " +
-          "The cyclists were led off the sidewalk onto the road and protected by parked cars. " +
-          "The maximum number of parking spaces has been reduced by a third here. However, on the other side of the street, " +
-          "nothing has changed yet. It is expected to be redesigned next year." +
+          "Stormaner Straße has been upgraded with a bike lane and a protected bike lane, " +
+          "on which children can also feel safe. In the intersection area, unfortunately, the space " +
+          " of the footpaths was reduced. For the most part, however, roadway and parking areas were used. " +
+          "Despite these changes, motorized traffic still retains most of the space." +
           "</p>",
-        image: "./media/stormaner_strasse_before.jpg",
-        caption: "Situation before, Source: André Landwehr",
         location: {
-          center: [10.074204, 53.613663],
-          zoom: 17.62,
-          pitch: 45,
-          bearing: -68,
+          zoom: 18.2,
+          center: [10.060457, 53.5766835],
+          pitch: 34,
+          bearing: -11.2,
         },
-        callback: "sourcesStormanerStrasse",
         mapAnimation: "flyTo",
         rotateAnimation: false,
+        callback: "settingsSourcesStormanertrasse",
         onChapterEnter: [],
         onChapterExit: [],
       },
       {
-        id: "sources-grindelhof",
+        id: "sources-alter-teichweg",
         alignment: "left",
         hidden: false,
-        title: "Temporary Solutions",
+        title: "Parking spaces are often relocated, not deleted",
         description:
-          '<p>Grindelhof near the university: Here, a previously almost two-lane car lane ' +
-          'was halved in width to create a "PopUp bike lane". ' +
-          'The usual width for a car lane was adhered to. ' +
-          'The right lane was marked as a parking strip. ' +
-          'Thus, at least during the day, there was no loss of parking space. ' +
-          'However, in the long run, this situation needs to be resolved differently because the road is often blocked by cars, as seen in the photo.</p>',
-        image: "./media/grindelhof_after.jpg",
-        caption: "Situation after, Source: André Landwehr",
+          "<p>" +
+          "The reconstruction at the old pond path, corner Gravensteiner Street is a good example. " +
+          "Here, about half of the parking spaces were changed as part of the bike infrastructure construction: " +
+          "The parking spaces were moved to the right, but not deleted. " +
+          "This allowed for a continuous bike lane to be installed on the street surface. " +
+          "On the map, the reconstruction is therefore shown as neutral in terms of area with regard to the parking spaces. " +
+          "</p>",
+        image: "./media/alter_teichweg_after_2.jpg",
+        caption: 
+        'Old pond path on Mapillary.com. Bike lane and parking lane swap places. ' +
+        'Since 2019, only about 0.27% of all parking spaces have actually been removed for bike infrastructure.',
         location: {
-          center: [9.986395, 53.563658],
-          zoom: 18.15,
+          zoom: 19.2,
+          center: [10.0673, 53.58708],
           pitch: 0,
-          bearing: -153,
+          bearing: 0,
         },
-        callback: "sourcesGrindelhof",
         mapAnimation: "flyTo",
         rotateAnimation: false,
+        callback: "settingsSourcesAlterTeichweg",
         onChapterEnter: [],
         onChapterExit: [],
       },
       {
-        id: "sources-franz-brueckner-weg",
-        alignment: "left",
-        hidden: false,
-        title: "Franz-Brückner-Weg in Alsterdorf",
-        description:
-          '<p>A classic parking lane has been removed, and the sidewalk has been widened to become a combined sidewalk and bike path. ' +
-          'This was possible because there are hardly any intersections. In contrast to the picture, the "combined sidewalk and bike path" sign has since been erected. ' +
-          'However, a two-way bike path would have been better here, ' +
-          'as most of the cycling traffic is currently on the road.</p>',
-        image: "./media/franz_brueckner_weg_after.jpg",
-        caption: "Situation after, Source: André Landwehr",
-        location: {
-          center: [10.008706, 53.620217],
-          zoom: 18.09,
-          pitch: 0,
-          bearing: -88,
-        },
-        callback: "sourcesFranzBruecknerWeg",
-        mapAnimation: "flyTo",
-        rotateAnimation: false,
-        onChapterEnter: [],
-        onChapterExit: [],
-      },
-      {
-        id: "sources-holstenstrasse",
-        alignment: "left",
-        hidden: false,
-        title: "Holstenstraße",
-        description:
-          '<p>Two of the three car lanes were converted into bike lanes. ' +
-          'One car lane has been removed and the other two have been narrowed. ' +
-          'The right lane was designated as a parking strip and is therefore only available during off-peak hours. ' +
-          'The lane used to be a car lane during rush hours and a parking strip during off-peak hours. ' +
-          'The pavement has remained unchanged. The reconstruction of the entire cross-section, ' +
-          'which had already been planned, will only take place in a few years. ' +
-          'The bike lanes have meanwhile been colored green, which was not yet the case in the photo.</p>',
-        image: "./media/holstenstrasse_before.jpg",
-        caption: "Situation before, Source: André Landwehr",
-        location: {
-          center: [9.928208, 53.553392],
-          zoom: 18.45,
-          pitch: 0,
-          bearing: -49,
-        },
-        callback: "sourcesHolstenstrasse",
-        mapAnimation: "flyTo",
-        rotateAnimation: false,
-        onChapterEnter: [],
-        onChapterExit: [],
-      },
-      {
-        id: "sources-poppenbuettel",
-        alignment: "left",
-        hidden: false,
-        title: "Poppenbüttel",
-        description:
-          '<p>The previously four-lane Poppenbüttler Hauptstraße was completely redesigned as part of the "Hamburg pedaling" program. ' +
-          'Only two lanes for motorized traffic were retained. The road space thus saved was used for wide, ' +
-          'convenient sidewalks and separate bike paths. About 50 parking spaces were retained. ' +
-          'The conversion was possible because two public parking garages offer sufficient replacement.</p>',
-        image: "./media/poppenbuettel_before.jpg",
-        caption: "Situation before, Source: André Landwehr",
-        location: {
-          center: [10.084226, 53.665869],
-          zoom: 18.55,
-          pitch: 0,
-          bearing: -70,
-        },
-        callback: "sourcesPoppenbuettel",
-        mapAnimation: "flyTo",
-        rotateAnimation: false,
-        onChapterEnter: [],
-        onChapterExit: [],
-      },
-      {
-        id: "sources-borstelmannsweg",
-        alignment: "left",
-        hidden: false,
-        title: "Borstelmannsweg",
-        description:
-          '<p>Here, two car lanes were combined into one, and the other lane was converted into a wide bike path. ' +
-          'The conversion of Borstelmannsweg is a classic win-win situation: ' +
-          'The number of lanes was reduced by 50%, but due to the optimization of traffic light switching, ' +
-          'the car\'s capacity even increased slightly. ' +
-          'Cyclists received a separate, wide lane, and pedestrians benefit from shorter crossing distances and two additional pedestrian crossings.</p>',
-        image: "./media/borstelmannsweg_after.jpg",
-        caption: "Situation after, Source: André Landwehr",
-        location: {
-          center: [10.012554, 53.500182],
-          zoom: 18.05,
-          pitch: 0,
-          bearing: -132,
-        },
-        callback: "sourcesBorstelmannsweg",
-        mapAnimation: "flyTo",
-        rotateAnimation: false,
-        onChapterEnter: [],
-        onChapterExit: [],
-      },
-      {
-        id: "sources-rahlstedter-strasse",
-        alignment: "left",
-        hidden: false,
-        title: "Rahlstedter Straße",
-        description:
-          '<p>A protected bike lane was added, and the remaining road space was divided into two narrower car lanes. ' +
-          'In contrast to the usual division of the lane into a rush hour lane and a parking strip, ' +
-          'this variant has the advantage that the lane remains passable even if wrong parkers block the bike path.</p>',
-        image: "./media/rahlstedter_strasse_after.jpg",
-        caption: "Situation after, Source: André Landwehr",
-        location: {
-          center: [10.105681, 53.593504],
-          zoom: 18.22,
-          pitch: 0,
-          bearing: -41,
-        },
-        callback: "sourcesRahlstedterStrasse",
-        mapAnimation: "flyTo",
-        rotateAnimation: false,
-        onChapterEnter: [],
-        onChapterExit: [],
-      },
-      {
-        id: "sources-summary",
+        id: "video-holzdamm",
         alignment: "full",
         hidden: false,
         description:
           '<div class="full-screen-container">' +
           '<div class="left">' +
-          '<h1>Conclusion</h1>' +
-          '<p>The examples show: It is almost always possible to create space for a bike path without losing car lanes or parking spaces. ' +
-          'In addition, the realignment often benefits all road users. ' +
-          'The necessary changes are often surprisingly small: A few lines of paint, some bollards, a few signs. ' +
-          'The main thing is to reallocate the existing space more sensibly. ' +
-          'And as the positive feedback from many residents shows: Wherever space for cyclists is created, the quality of life improves for everyone.</p>' +
-          '</div>' +
+          "<h1>Es gibt noch viel zu tun</h1>" +
+          "<p>" +
+          "This video was shot at Holzdamm (Atlantic Hotel Hamburg is on the right). " +   
+          "Its central location and its function as a connection point between the Outer Alster and the main station " +
+          "makes the Holzdamm an important traffic point. " +
+          "<p>" +
+          "The video illustrates that there is no consistent concept for bike lanes at this location. " +
+          "Due to the limited space and the lack of dedicated signage for bike lanes, safety aspects for cyclists are neglected." +
+          "</p>" +
+          "</div>" +
           '<div class="right">' +
-          '<img src="./media/conclusion.jpg" alt="Positive changes in the city" />' +
-          '</div>' +
-          '</div>',
+          "<div>" +
+            '<video controls width="300px;">' +
+            '<source src="./media/video_holzdamm.webm" type="video/webm" />' +
+            '</video>' +
+          "</div>" +
+          "</div>",
         callback: "neutralMap",
         location: {
           center: [10, 53.55],
@@ -456,6 +345,56 @@ const config = {
           bearing: 0,
         },
         mapAnimation: "flyTo",
+        rotateAnimation: false,
+        onChapterEnter: [],
+        onChapterExit: [],
+      },{
+        id: "outro",
+        alignment: "center",
+        hidden: false,
+        title: 'Outlook: What do the analyses tell us about the state of the transportation space?',
+      description:
+        "<p>" +
+        "In the debate around the mobility turnaround, the division of transport space plays a crucial role. " +
+        "The data in this analysis shows which mode of transport needs how much space. " +
+        "For example, it shows: Parking spaces (6.8%) take up twice as much space in Hamburg as total bike lanes (3.4%) combined." + 
+        "</p>" +
+        "<p>" +
+        "Greater use of bicycles in urban traffic space not only reduces noise and air pollution, " +
+        "it creates more space and new spaces with high quality of stay for all. " + 
+        "These findings are also embodied in the National Cycling Plan 3.0. " +
+        "This contains the Federal Government's strategy for promoting cycling in Germany until 2030 and gives cycling " +
+        "a more central function in overall mobility, which is why the plan not only aims for a seamless cycling network, " +
+        "but takes it for granted that people will be able to get around quickly and safely by bike." +
+        "</p>" +
+        "<p>" +
+        "This is another thing the analysis showed: there is still a lot of potential for adapting and improving the infrastructure in Hamburg." + 
+        "</p>",
+        // callback: "neutralMap",
+        location: {
+          center: [10, 53.55],
+          zoom: 13.5,
+          pitch: 20,
+          bearing: 0,
+        },
+        mapAnimation: "flyTo",
+        callback: "neutralMap",
+        rotateAnimation: false,
+        onChapterEnter: [],
+        onChapterExit: [],
+      },{
+        id: "explore-map",
+        alignment: "left",
+        hidden: false,
+        description: 'Move the map and explore your own neighborhood! What\'s the space distribution there like?',
+        location: {
+          zoom: 18.2,
+          center: [10.05692, 53.58058],
+          pitch: 34,
+          bearing: -11.2,
+        },
+        mapAnimation: "flyTo",
+        callback: "overviewNewInfra",
         rotateAnimation: false,
         onChapterEnter: [],
         onChapterExit: [],
