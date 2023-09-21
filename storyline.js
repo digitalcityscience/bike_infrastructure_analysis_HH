@@ -227,8 +227,7 @@ const config = {
         "</p>" +
         "<p>" +
         "Die Wahrheit ist: Nur ein winziger Bruchteil. Seit 2019 sind zum " +
-        "Beispiel gerad
-        Almost 70% of the traffic area is consumed by cars for roadways and parking. On this area 32% of all trips take place.e einmal ca. 0,27% der Parkflächen zu Radinfrastruktur " +
+        "Beispiel gerade einmal ca. 0,27% der Parkflächen zu Radinfrastruktur " +
         "umgewandelt worden, angesichts der aufgeheizten Diskussionen in den Medien umso bemerkenswerter." +
         "</p>" +
         "<p>" +
