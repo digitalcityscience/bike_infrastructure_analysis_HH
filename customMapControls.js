@@ -133,14 +133,14 @@ const maps = {
     interactive: false
   },
   "map-area-sums-residential": {
-    style: "mapbox://styles/grasbrook-city-scope/clkpjf52500bg01pegfru6zgi",
-    zoom: 17.88,
-    zoom_mobile: 17.88,
-    center: [9.99017, 53.51555],
-    center_mobile:[9.99051, 53.5160],
-    pitch: 40,
-    bearing: 8,
-    interactive: false
+    style: "mapbox://styles/grasbrook-city-scope/clnonhpwy00ca01qy48zxaji5",
+    zoom: 19,
+    zoom_mobile: 18.5,
+    center: [9.96129, 53.55345],
+    center_mobile:[9.96175, 53.55368],
+    pitch: 58,
+    bearing: 29.60,
+    interactive: false,
   },
   "map-gaps-reeperbahn": {
     style: "mapbox://styles/grasbrook-city-scope/clks480ty00p601qpf0ol1tm7",
