@@ -62,7 +62,7 @@ function replaceMap(mapSettings) {
 }
 
 /** CALLBACK FUNCTIONS */
-function settingsForMaxBrauer() {
+function settingsForLandungsbruecken() {
   let mapSettings = maps["map-areas-sums-landungsbruecken"];
   updateMap(mapSettings);
 }
@@ -120,7 +120,7 @@ const maps = {
   },
   "map-areas-sums-landungsbruecken": {
     style: "mapbox://styles/grasbrook-city-scope/clnonhpwy00ca01qy48zxaji5",
-    zoom: 18.54,
+    zoom: 18.7,
     zoom_mobile: 16.75,
     center: [9.97025, 53.54585],
     center_mobile: [9.96881, 53.54536],

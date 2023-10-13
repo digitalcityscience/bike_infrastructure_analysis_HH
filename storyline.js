@@ -1,15 +1,16 @@
 const config = {
-  style: "mapbox://styles/grasbrook-city-scope/clkpjf52500bg01pegfru6zgi",
+  style: "mapbox://styles/grasbrook-city-scope/clnonhpwy00ca01qy48zxaji5",
   accessToken:
     "pk.eyJ1IjoiZ3Jhc2Jyb29rLWNpdHktc2NvcGUiLCJhIjoiY2szZnYzNWw0MDhhaDNwcnp1NDFsMTV5aiJ9.3P2XxlxJ6VbUiO_wfmrVrg",
   showMarkers: false,
   markerColor: "#3FB1CE",
-  inset: false,  // removed all inset related code to declutter.
+  inset: false, // removed all inset related code to declutter.
   theme: "light",
   use3dTerrain: false, //set true for enabling 3D maps.
   auto: false,
   title: "Analyse des Verkehrsraums in Hamburg",
-  switchLanguageButton: '<a href="./englishVersion.html" target="_blank">EN</a>',
+  switchLanguageButton:
+    '<a href="./englishVersion.html" target="_blank">EN</a>',
   subtitle: "Ein Verkehrsraum-Check: Wer bekommt wie viel Platz im Verkehr?",
   byline: "André Landwehr @DigitalCityScience, HCU Hamburg",
   footer:
@@ -24,32 +25,32 @@ const config = {
       alignment: "full",
       hidden: false,
       description:
-      '<div class="full-screen-container">' +
+        '<div class="full-screen-container">' +
         '<div class="left">' +
-        '<p>Hamburg befindet sich inmitten einer Mobilitätswende, ' +
-        'die eine Neuausrichtung der städtischen Flächennutzung erfordert. ' +
-        'Die Transformation der Straßenlandschaft Hamburgs zugunsten des Radverkehrs ' +
-        'hat intensive Debatten ausgelöst - und nicht wenig Unmut unter den Autofahrern, ' +
-        'die das Gefühl haben, dass ihr Raum zunehmend schrumpft.</p>' +
-        '<p>Doch wie sehen die Platzverhältnisse in Wahrheit aus? Wer beansprucht derzeit welchen Anteil des Verkehrsraums? ' +
-        'Wie viele Wege werden auf diesen Flächen tatsächlich zurückgelegt? ' +
-        'Welcher Anteil wurde tatsächlich in neue Fahrradinfrastruktur umgewandelt? ' +
-        'Und wer hat dafür Platz gemacht - und wie viel?</p><p>Diese kartographische Auswertung ' +
-        'versucht etwas Objektivität und Nüchternheit in eine emotionale Debatte zu bringen. ' +
-        'Entdecken Sie mit uns wie fast 7% der öffentlichen Verkehrsfläche zum Beispiel alleine für '+ 
-        'Parken verbraucht wird und wie viele Parkplätze seit 2019 für Radwege weggefallen sind. <br>' +
-        'Am Ende der Story können Sie auch ihre eigene Nachbarschaft erkunden.<br>' +
-        'Let\'s dive in.</p>' +
-        '</div>' +
-        '<div class="right">' +
-          '<video controls width="300px;" style="text-align: center;">' +
-          '<source src="./media/intro.webm" type="video/webm" />' +
-          '</video>' +
-          '<div class="caption">' +
-            'Musik: "Ährenfeld" by J’Used' +
-          '</div>' +
+        "<p>Hamburg befindet sich inmitten einer Mobilitätswende, " +
+        "die eine Neuausrichtung der städtischen Flächennutzung erfordert. " +
+        "Die Transformation der Straßenlandschaft Hamburgs zugunsten des Radverkehrs " +
+        "hat intensive Debatten ausgelöst - und nicht wenig Unmut unter den Autofahrern, " +
+        "die das Gefühl haben, dass ihr Raum zunehmend schrumpft.</p>" +
+        "<p>Doch wie sehen die Platzverhältnisse in Wahrheit aus? Wer beansprucht derzeit welchen Anteil des Verkehrsraums? " +
+        "Wie viele Wege werden auf diesen Flächen tatsächlich zurückgelegt? " +
+        "Welcher Anteil wurde tatsächlich in neue Fahrradinfrastruktur umgewandelt? " +
+        "Und wer hat dafür Platz gemacht - und wie viel?</p><p>Diese kartographische Auswertung " +
+        "versucht etwas Objektivität und Nüchternheit in eine emotionale Debatte zu bringen. " +
+        "Entdecken Sie mit uns wie fast 7% der öffentlichen Verkehrsfläche zum Beispiel alleine für " +
+        "Parken verbraucht wird und wie viele Parkplätze seit 2019 für Radwege weggefallen sind. <br>" +
+        "Am Ende der Story können Sie auch ihre eigene Nachbarschaft erkunden.<br>" +
+        "Let's dive in.</p>" +
         "</div>" +
-      '</div>',
+        '<div class="right">' +
+        '<video controls width="300px;" style="text-align: center;">' +
+        '<source src="./media/intro.webm" type="video/webm" />' +
+        "</video>" +
+        '<div class="caption">' +
+        'Musik: "Ährenfeld" by J’Used' +
+        "</div>" +
+        "</div>" +
+        "</div>",
       location: {
         center: [10, 53.55],
         zoom: 13.5,
@@ -67,15 +68,15 @@ const config = {
       hidden: false,
       title: "Aufteilung des Verkehrsraums in Hamburg",
       description:
-        '<p><i>Fast 70% der Verkehrsfläche werden von Autos für Fahrbahnen und Parkraum verbraucht. Auf dieser Fläche finden 32% aller Wege statt.' +
-        '<br> 3,4% der Verkehrsfläche sind Radwege. Auf dieser Fläche finden 22% aller in Hamburg zurückgelegten Wege statt.' +  
-        '</i></p> ' +
+        "<p><i>Fast 70% der Verkehrsfläche werden von Autos für Fahrbahnen und Parkraum verbraucht. Auf dieser Fläche finden 32% aller Wege statt." +
+        "<br> 3,4% der Verkehrsfläche sind Radwege. Auf dieser Fläche finden 22% aller in Hamburg zurückgelegten Wege statt." +
+        "</i></p> " +
         '<div><canvas id="chart_verkehrsflaechen" style="height:280px; max-width:100%;"></canvas></div>' +
-        '<p>Der motorisierte Verkehr nimmt mit Parkflächen und Fahrbahn 67,75% der nutzbaren Verkehrsfläche Hamburgs' +
-        'in Anspruch und hat einen enormen Flächenverbrauch, auf dem ca. 32% aller Wege zurückgelegt werden. ' +
-        '43% der Hamburger Haushalte besitzen keinen PKW. <br />' +
-        'Auf rund 3,4% der Gesamtfläche – also einem Zwanzigstel der Fläche des Autoverkehrs – werden 22% aller Wege per Rad zurückgelegt.' +
-        '<br>Somit ist das Rad bei weitem das flächeneffektivste Fortbewegungsmittel.</p>',
+        "<p>Der motorisierte Verkehr nimmt mit Parkflächen und Fahrbahn 67,75% der nutzbaren Verkehrsfläche Hamburgs" +
+        "in Anspruch und hat einen enormen Flächenverbrauch, auf dem ca. 32% aller Wege zurückgelegt werden. " +
+        "43% der Hamburger Haushalte besitzen keinen PKW. <br />" +
+        "Auf rund 3,4% der Gesamtfläche – also einem Zwanzigstel der Fläche des Autoverkehrs – werden 22% aller Wege per Rad zurückgelegt." +
+        "<br>Somit ist das Rad bei weitem das flächeneffektivste Fortbewegungsmittel.</p>",
       mapAnimation: "flyTo",
       rotateAnimation: false,
       callback: "",
@@ -89,16 +90,14 @@ const config = {
       onChapterExit: [],
     },
     {
-      id: "area-distribution-max-brauer",
+      id: "area-distribution-landungsbruecken",
       alignment: "left",
       hidden: false,
-      title: "Flächenaufteilung in der Praxis - Max-Brauer-Allee",
+      title: "Flächenaufteilung in der Praxis - Landungsbrücken",
       description:
-        '<p>Doch wie kommen solche Flächenverhältnisse zustande? <br />' +
-        'Als Beispiel dient hier eine typische Aufteilung der Straßenfläche an der Max-Brauer-Allee. ' +
-        'Trotz vergleichsweise viel Platz für Begrünung für Fußwege nehmen Fahr- und Parkflächen einen Großteil des Platzes ein. ' +
-        'Der Radverkehr hat nur am Südende einen schmalen Streifen und ist ansonsten gar nicht vertreten. ' +
-        'Die Straßenaufteilung soll hier allerdings in Zukunft neu gestaltet werden.</p>',
+        "<p>Doch wie kommen solche Flächenverhältnisse zustande? <br />" +
+        "Als Beispiel dient hier eine typische Aufteilung der Straßenfläche an den Landungsbrücken. " +
+        "Trotz viel touristischen Fußverkehr nehmen Fahr- und Parkflächen einen Großteil des Platzes ein. " ,
       location: {
         center: [9.9395, 53.55365],
         zoom: 17.52,
@@ -107,7 +106,33 @@ const config = {
       },
       mapAnimation: "flyTo",
       rotateAnimation: false,
-      callback: "settingsForMaxBrauer",
+      callback: "settingsForLandungsbruecken",
+      onChapterEnter: [],
+      onChapterExit: [],
+    },
+    {
+      id: "area-distribution-landungsbruecken",
+      alignment: "left",
+      hidden: false,
+      title: "Flächenaufteilung in der Praxis - Landungsbrücken",
+      description:
+        "Noch vor ca. 100 Jahren, sah die Realität hier ganz anders aus." +
+        "Inspiriert davon zeigt dieses Video einen Alternativvorschlag für die Flächenverteilung.</p>" +
+        '<video controls width="300px;" style="text-align: center;">' +
+        '<source src="./media/landungsbruecken.webm" type="video/webm" />' +
+        "</video>" +
+        '<div class="caption">' +
+        'Video: <a href="https://visualutopias.com/" target="blank" >Jan Kamensky, Visual Utopias</a>' +
+        "</div>",
+      location: {
+        center: [9.9395, 53.55365],
+        zoom: 17.52,
+        pitch: 8.01,
+        bearing: -11.2,
+      },
+      mapAnimation: "flyTo",
+      rotateAnimation: false,
+      callback: "",
       onChapterEnter: [],
       onChapterExit: [],
     },
@@ -116,11 +141,10 @@ const config = {
       alignment: "left",
       hidden: false,
       title: "Flächenaufteilung in der Praxis - Typisches Wohngebiet",
-      image: "./media/fahrstrasse_mapillary_veloroute_hamburg.jpg",
-      caption: 'Fährstrasse auf Mapillary.com. Typisches Wohngebiet mit 3 Parkreihen, jedoch ohne Radfahrstreifen',
       description:
-        '<p>Eine Fahrbahn in der Mitte - an den Rändern jeweils eine Reihe Parkflächen, ein schmaler Bürgersteig' +
-        'und etwas Begrünung. Dezidierte Flächen für Radinfrastruktur gibt es nicht.<br></p>',
+        "<p>Eine Fahrbahn in der Mitte - an den Rändern jeweils eine Reihe Parkflächen, ein schmaler Bürgersteig" +
+        "und etwas Begrünung. Dezidierte Flächen für Radinfrastruktur gibt es nicht.<br>" +
+        "Hier als Beispiel die Wohlwillstrasse.</p>",
       location: {
         center: [9.99026, 53.51601],
         zoom: 17.88,
@@ -134,15 +158,41 @@ const config = {
       onChapterExit: [],
     },
     {
+      id: "area-distribution-residential",
+      alignment: "left",
+      hidden: false,
+      title: "Flächenaufteilung in der Praxis - Typisches Wohngebiet",
+      description:
+        "<p>Auch dieser Platz wurde von Jan Kamensky neu gedacht:</p>" +
+        '<video controls width="300px;" style="text-align: center;">' +
+        '<source src="./media/wohlwillstrasse.webm" type="video/webm" />' +
+        "</video>" +
+        '<div class="caption">' +
+        'Video: <a href="https://visualutopias.com/" target="blank" >Jan Kamensky, Visual Utopias</a>' +
+        "</div>",
+      location: {
+        center: [9.99026, 53.51601],
+        zoom: 17.88,
+        pitch: 36,
+        bearing: 92.8,
+      },
+      mapAnimation: "flyTo",
+      rotateAnimation: false,
+      callback: "",
+      onChapterEnter: [],
+      onChapterExit: [],
+    },
+    {
       id: "gaps-reeperbahn",
       alignment: "left",
       hidden: false,
       title: "Warum hört der Radweg einfach hier auf?",
       image: "./media/reeperbahn_mischverkehr_2.png",
-      caption: 'Reeperbahn auf Mapillary.com. Der getrennter Radweg wird zu einem schmalen Schutzstreifen auf der Strasse.',
+      caption:
+        "Reeperbahn auf Mapillary.com. Der getrennter Radweg wird zu einem schmalen Schutzstreifen auf der Strasse.",
       description:
         '<p>Oft enden Radwege abrupt im "Mischverkehr 50km/h". Dabei wird der Radweg entweder auf die Straße verschwenkt ' +
-        '– oder ­­­­­­­­­­­­­­­falls bereits auf der Straße verlaufend – aufgelöst. Diese Situationen bedeuten Stress für alle Verkehrsteilnehmenden.</p>',
+        "– oder ­­­­­­­­­­­­­­­falls bereits auf der Straße verlaufend – aufgelöst. Diese Situationen bedeuten Stress für alle Verkehrsteilnehmenden.</p>",
       location: {
         center: [9.9673119, 53.5500528],
         zoom: 19.28,
@@ -161,13 +211,14 @@ const config = {
       hidden: false,
       title: "Warum hört der Radweg einfach hier auf?",
       image: "./media/bundesstrasse_mischverkehr.jpg",
-      caption: 'Bundestrasse auf Mapillary.com. Der Schutzstreifen wird ca. 50m nach der Kreuzung ersatzlos aufgelöst.',
+      caption:
+        "Bundestrasse auf Mapillary.com. Der Schutzstreifen wird ca. 50m nach der Kreuzung ersatzlos aufgelöst.",
       description:
-        'Die Situation an der Bundesstrasse (50km/h), wo ein Schutzstreifen wenige Meter ' +
-        'nach der Kreuzung aufgelöst wird. Nach ca. 150m beginnt verdeckt von einer ' +
-        'Parkreihe ein neuer Radweg, der allerdings auch nicht ausgewiesen ist. ' +
-        'Befragungen zeigen, dass viele Menschen sich nicht trauen in Hamburg Rad zu fahren. ' +
-        'Solche eher einfach zu schließenden Lücken tragen sicherlich dazu bei.',
+        "Die Situation an der Bundesstrasse (50km/h), wo ein Schutzstreifen wenige Meter " +
+        "nach der Kreuzung aufgelöst wird. Nach ca. 150m beginnt verdeckt von einer " +
+        "Parkreihe ein neuer Radweg, der allerdings auch nicht ausgewiesen ist. " +
+        "Befragungen zeigen, dass viele Menschen sich nicht trauen in Hamburg Rad zu fahren. " +
+        "Solche eher einfach zu schließenden Lücken tragen sicherlich dazu bei.",
       location: {
         zoom: 19.28,
         center: [9.97436, 53.56899],
@@ -231,9 +282,9 @@ const config = {
         "umgewandelt worden, angesichts der aufgeheizten Diskussionen in den Medien umso bemerkenswerter." +
         "</p>" +
         "<p>" +
-        'Allein die aktuelle Umrüstungsrate von 0,25% aller Parkflächen in Hamburg innerhalb der vergangenen vier Jahre macht deutlich, ' +
-        'dass der Wandel noch einige Zeit in Anspruch nehmen wird. Beachtlich hingegen sind die Auswirkungen dieser scheinbar kleinen Veränderungen, ' +
-        'die bereits 117 km neue Radinfrastruktur ausmachen. ' +
+        "Allein die aktuelle Umrüstungsrate von 0,25% aller Parkflächen in Hamburg innerhalb der vergangenen vier Jahre macht deutlich, " +
+        "dass der Wandel noch einige Zeit in Anspruch nehmen wird. Beachtlich hingegen sind die Auswirkungen dieser scheinbar kleinen Veränderungen, " +
+        "die bereits 117 km neue Radinfrastruktur ausmachen. " +
         "</p>" +
         "</div>" +
         '<div class="right">' +
@@ -241,9 +292,9 @@ const config = {
         "Wie viel der Fahr- oder Parkflächen wurden tatsächlich in " +
         "Radinfrastruktur umgewandelt?" +
         "</h2>" +
-        '<p><i>Seit 2019 wurde 0,71% der Fahrbahnfläche und 0,27% der Parkfläche in Radinfrastruktur umgebaut. Insgesamt also weniger als 1% der Fläche für Autoverkehr.</i></p>' +
+        "<p><i>Seit 2019 wurde 0,71% der Fahrbahnfläche und 0,27% der Parkfläche in Radinfrastruktur umgebaut. Insgesamt also weniger als 1% der Fläche für Autoverkehr.</i></p>" +
         "<div>" +
-          '<canvas id="chart_footprint" style="height:400px; max-width:100%;"></canvas>' +
+        '<canvas id="chart_footprint" style="height:400px; max-width:100%;"></canvas>' +
         "</div> " +
         "<p>" +
         "<i" +
@@ -304,9 +355,9 @@ const config = {
         "Auf der Karte wird der Umbau deshalb bezüglich der Parkplätze flächenneutral dargestellt. " +
         "</p>",
       image: "./media/alter_teichweg_after_2.jpg",
-      caption: 
-      'Alter Teichweg auf Mapillary.com. Radfahr- und Parkstreifen tauschen die Plätze. ' +
-      'Seit 2019 sind nur ca. 0,27% aller Parkflächen tatsächlich für Radinfrastruktur weggefallen.',
+      caption:
+        "Alter Teichweg auf Mapillary.com. Radfahr- und Parkstreifen tauschen die Plätze. " +
+        "Seit 2019 sind nur ca. 0,27% aller Parkflächen tatsächlich für Radinfrastruktur weggefallen.",
       location: {
         zoom: 19.2,
         center: [10.0673, 53.58708],
@@ -329,7 +380,7 @@ const config = {
         "<h1>Es gibt noch viel zu tun</h1>" +
         "<p>" +
         "Dieses Video wurde im Holzdamm (rechter Hand liegt das Atlantic Hotel Hamburg) aufgenommen. " +
-        "Seine zentrale Lage und seine Funktion als Verbindungspunkt zwischen Außenalster und Hauptbahnhof "+
+        "Seine zentrale Lage und seine Funktion als Verbindungspunkt zwischen Außenalster und Hauptbahnhof " +
         "macht den Holzdamm zu einem wichtigen Verkehrspunkt. " +
         "</p>" +
         "<p>" +
@@ -339,9 +390,9 @@ const config = {
         "</div>" +
         '<div class="right">' +
         "<div>" +
-          '<video controls width="300px;">' +
-          '<source src="./media/video_holzdamm.webm" type="video/webm" />' +
-          '</video>' +
+        '<video controls width="300px;">' +
+        '<source src="./media/video_holzdamm.webm" type="video/webm" />' +
+        "</video>" +
         "</div>" +
         "</div>",
       callback: "neutralMap",
@@ -355,11 +406,13 @@ const config = {
       rotateAnimation: false,
       onChapterEnter: [],
       onChapterExit: [],
-    },{
+    },
+    {
       id: "outro",
       alignment: "center",
       hidden: false,
-      title: 'Ausblick: Was sagen uns die Analysen über den Stand des Verkehrsraums?',
+      title:
+        "Ausblick: Was sagen uns die Analysen über den Stand des Verkehrsraums?",
       description:
         "<p>" +
         "In der Debatte rund um die Mobilitätswende spielt die Aufteilung des Verkehrsraum eine entscheidende Rolle. " +
@@ -372,10 +425,10 @@ const config = {
         "Diese Erkenntnisse sind auch im Nationalen Radverkehrsplan 3.0 verankert. " +
         "Dieser beinhaltet die Strategie der Bundesregierung zur Förderung des Radverkehrs in Deutschland bis 2030 und räumt dem Rad " +
         "eine zentralere Funktion in der gesamten Mobilität ein, weshalb der Plan nicht nur ein lückenloses Radverkehrsnetz zum Ziel hat, " +
-        "sondern es als selbstverständlich ansieht, sich schnell und sicher auf dem Rad fortbewegen zu können."+
+        "sondern es als selbstverständlich ansieht, sich schnell und sicher auf dem Rad fortbewegen zu können." +
         "</p>" +
         "<p>" +
-          "Auch das hat die Analyse gezeigt: Es gibt noch viel Potential zur Anpassung und Verbesserung der Infrastruktur in Hamburg." +
+        "Auch das hat die Analyse gezeigt: Es gibt noch viel Potential zur Anpassung und Verbesserung der Infrastruktur in Hamburg." +
         "</p>",
       // callback: "neutralMap",
       location: {
@@ -389,11 +442,13 @@ const config = {
       rotateAnimation: false,
       onChapterEnter: [],
       onChapterExit: [],
-    },{
+    },
+    {
       id: "explore-map",
       alignment: "center",
       hidden: false,
-      description: 'Bewegen Sie die Karte und schauen Sie sich in Ihrer Nachbarschaft um. Wer hat hier wie viel Platz?',
+      description:
+        "Bewegen Sie die Karte und schauen Sie sich in Ihrer Nachbarschaft um. Wer hat hier wie viel Platz?",
       location: {
         zoom: 18.2,
         center: [10.05692, 53.58058],
