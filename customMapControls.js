@@ -4,18 +4,17 @@
  * @param {*} mapSettings
  */
 function updateMap(mapSettings) {
-
   if (isMobile()) {
     mapSettings.center = mapSettings.center_mobile;
     mapSettings.zoom = mapSettings.zoom_mobile;
   }
 
-  console.log("interactive?")
-  console.log(mapSettings.interactive, map._interactive)
-  console.log(mapSettings.interactive == map._interactive)
+  console.log("interactive?");
+  console.log(mapSettings.interactive, map._interactive);
+  console.log(mapSettings.interactive == map._interactive);
   if (
-    isCurrentlyUsedMapStyle(mapSettings.style)
-    && mapSettings.interactive == map._interactive
+    isCurrentlyUsedMapStyle(mapSettings.style) &&
+    mapSettings.interactive == map._interactive
   ) {
     updateMapLocation(mapSettings);
   } else {
@@ -39,12 +38,11 @@ function isCurrentlyUsedMapStyle(styleUrl) {
   return styleUrl.includes(map.style.stylesheet.id);
 }
 
-
 async function updateMapLocation(mapSettings) {
   await map.flyTo({
     center: mapSettings.center,
     zoom: mapSettings.zoom,
-    bearing: mapSettings.bearing
+    bearing: mapSettings.bearing,
   });
 }
 
@@ -63,10 +61,9 @@ function replaceMap(mapSettings) {
   });
 }
 
-
 /** CALLBACK FUNCTIONS */
 function settingsForMaxBrauer() {
-  let mapSettings = maps["map-areas-sums-max-brauer"];
+  let mapSettings = maps["map-areas-sums-landungsbruecken"];
   updateMap(mapSettings);
 }
 
@@ -110,36 +107,35 @@ function overviewNewInfra() {
   updateMap(mapSettings);
 }
 
-
 const maps = {
   "map-neutral": {
-    style: "mapbox://styles/grasbrook-city-scope/clkpjf52500bg01pegfru6zgi",
+    style: "mapbox://styles/grasbrook-city-scope/clnonhpwy00ca01qy48zxaji5",
     center: [10, 53.55],
     zoom: 13.5,
     center_mobile: [10, 53.55],
     zoom_mobile: 13.5,
     pitch: 20,
     bearing: 0,
-    interactive: false
+    interactive: false,
   },
-  "map-areas-sums-max-brauer": {
-    style: "mapbox://styles/grasbrook-city-scope/clkpjf52500bg01pegfru6zgi",
-    zoom: 17.0,
+  "map-areas-sums-landungsbruecken": {
+    style: "mapbox://styles/grasbrook-city-scope/clnonhpwy00ca01qy48zxaji5",
+    zoom: 18.54,
     zoom_mobile: 16.75,
-    center: [9.939037, 53.553745],
-    center_mobile:[9.93886, 53.55470],
-    pitch: 39.5,
-    bearing: -8,
-    interactive: false
+    center: [9.97025, 53.54585],
+    center_mobile: [9.96881, 53.54536],
+    pitch: 35,
+    bearing: -152.8,
+    interactive: false,
   },
   "map-area-sums-residential": {
     style: "mapbox://styles/grasbrook-city-scope/clnonhpwy00ca01qy48zxaji5",
     zoom: 19,
     zoom_mobile: 18.5,
     center: [9.96129, 53.55345],
-    center_mobile:[9.96175, 53.55368],
+    center_mobile: [9.96175, 53.55368],
     pitch: 58,
-    bearing: 29.60,
+    bearing: 29.6,
     interactive: false,
   },
   "map-gaps-reeperbahn": {
@@ -150,8 +146,8 @@ const maps = {
     pitch: 0,
     bearing: 0,
     zoom_mobile: 17.8,
-    center_mobile:[9.96741, 53.55043],
-    interactive: false
+    center_mobile: [9.96741, 53.55043],
+    interactive: false,
   },
   "map-gaps-bundesstrasse": {
     style: "mapbox://styles/grasbrook-city-scope/clks480ty00p601qpf0ol1tm7",
@@ -161,8 +157,8 @@ const maps = {
     pitch: 0,
     bearing: 146,
     zoom_mobile: 18.3,
-    center_mobile:[9.97475, 53.56881],
-    interactive: false
+    center_mobile: [9.97475, 53.56881],
+    interactive: false,
   },
   "overview-gaps": {
     style: "mapbox://styles/grasbrook-city-scope/clks480ty00p601qpf0ol1tm7",
@@ -172,7 +168,7 @@ const maps = {
     zoom_mobile: 13.5,
     pitch: 20,
     bearing: 0,
-    interactive: false
+    interactive: false,
   },
   "map-sources-stormaner": {
     style: "mapbox://styles/grasbrook-city-scope/clkr2tev500f001pe5mdb9m7a",
@@ -181,8 +177,8 @@ const maps = {
     center: [10.060457, 53.5766835],
     center_mobile: [10.0599, 53.5768],
     pitch: 34,
-    bearing: -11.20,
-    interactive: false
+    bearing: -11.2,
+    interactive: false,
   },
   "map-sources-alter-teichweg": {
     style: "mapbox://styles/grasbrook-city-scope/clkr2tev500f001pe5mdb9m7a",
@@ -193,7 +189,7 @@ const maps = {
     center_mobile: [10.06756, 53.58722],
     pitch: 0,
     bearing: 85,
-    interactive: false
+    interactive: false,
   },
   "overview-new-infra": {
     style: "mapbox://styles/grasbrook-city-scope/clkr2tev500f001pe5mdb9m7a",
@@ -202,7 +198,7 @@ const maps = {
     center: [10.05692, 53.58058],
     center_mobile: [10.05692, 53.58058],
     pitch: 34,
-    bearing: -11.20,
-    interactive: true
+    bearing: -11.2,
+    interactive: true,
   },
 };
