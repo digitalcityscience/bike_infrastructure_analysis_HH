@@ -14,7 +14,7 @@ const config = {
   footer:
     "André Landwehr @DigitalCityScience, HCU Hamburg <br>" +
     "Geodata analysis based on the data from the Geoportal Hamburg <br>" +
-    'Source-Code: <a href="?" target="_blank">PROVIDE LINK</a> <br>' +
+    'Source-Code: <a href="https://github.com/digitalcityscience/bike_infrastructure_analysis_HH" target="_blank">Github Repo</a> <br>' +
     'Street level photos from <a href="https://mapillary.com" target="_blank">Mapillary.com</a> ' +
     'under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 License</a>',
   chapters: [
